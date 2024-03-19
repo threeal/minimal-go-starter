@@ -6,7 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestIsOdd(t *testing.T) {
-	assert.True(t, IsOdd(7))
-	assert.False(t, IsOdd(8))
+func TestFibonacciSequence(t *testing.T) {
+	assert.Equal(t, FibonacciSequence(-1), []int{})
+	assert.Equal(t, FibonacciSequence(0), []int{})
+	assert.Equal(t, FibonacciSequence(1), []int{1})
+	assert.Equal(t, FibonacciSequence(2), []int{1, 1})
+	assert.Equal(t, FibonacciSequence(5), []int{1, 1, 2, 3, 5})
 }
