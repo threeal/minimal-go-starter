@@ -1,4 +1,4 @@
-module github.com/threeal/starter-go
+module github.com/threeal/go-starter
 
 go 1.19
 
