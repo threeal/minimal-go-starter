@@ -1,5 +1,5 @@
-// Package starter provides example functions.
-package starter
+// Package myfibonacci provides example functions for generating sequences of numbers.
+package myfibonacci
 
 // FibonacciSequence generates a Fibonacci sequence up to the given number of terms.
 func FibonacciSequence(n int) []int {
