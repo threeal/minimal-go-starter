@@ -5,14 +5,24 @@ on:
   push:
     branches: [main]
 jobs:
-  test:
+  check-packages:
+    name: Check Packages
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4.1.2
 
-      - name: Format the source code and check for differences
-        run: go fmt ./... && git diff --exit-code HEAD
+      - name: Check Formatting
+        run: |
+          go fmt ./...
+          git diff --exit-code HEAD
 
-      - name: Run unit tests
+  test-packages:
+    name: Test Packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.2
+
+      - name: Run Tests
         run: go test -v ./...
