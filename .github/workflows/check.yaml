@@ -12,10 +12,10 @@ jobs:
       - name: Check Out
         uses: actions/checkout@v4.1.7
 
-      - name: Setup Go
+      - name: Set Up Go
         uses: actions/setup-go@v5.0.1
         with:
-          go-version: stable
+          go-version-file: go.mod
 
       - name: Check Formatting
         run: |
