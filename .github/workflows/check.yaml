@@ -17,6 +17,11 @@ jobs:
         with:
           go-version: stable
 
+      - name: Check Dependencies
+        run: |
+          go mod tidy
+          git diff --exit-code HEAD
+
       - name: Check Formatting
         run: |
           go fmt ./...
